@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="request" />
+        <module name="cookie" />
+        <module name="response" />
+        <module name="servlet-02" />
+        <module name="servlet-01" />
+        <module name="fileUpload" />
+        <module name="send-email" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cookieDelete" target="1.7" />
+      <module name="jspLearn" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

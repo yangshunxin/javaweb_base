@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0"
+         metadata-complete="true">
+
+    <session-config>
+        <!--设置session的失效时间,单位时分钟        -->
+        <session-timeout>1</session-timeout>
+    </session-config>
+
+
+    <servlet>
+        <servlet-name>cookie</servlet-name>
+        <servlet-class>org.example.servlet.cookieServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>cookie</servlet-name>
+        <url-pattern>/co</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cookieDel</servlet-name>
+        <servlet-class>org.example.servlet.cookieDelete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cookieDel</servlet-name>
+        <url-pattern>/del</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>session</servlet-name>
+        <servlet-class>org.example.servlet.Session</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>session</servlet-name>
+        <url-pattern>/ss</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sessionGet</servlet-name>
+        <servlet-class>org.example.servlet.SessionGet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessionGet</servlet-name>
+        <url-pattern>/ssgt</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sessionDel</servlet-name>
+        <servlet-class>org.example.servlet.SessioinDelete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessionDel</servlet-name>
+        <url-pattern>/ssdel</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

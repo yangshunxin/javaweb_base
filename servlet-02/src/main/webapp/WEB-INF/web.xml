@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0"
+         metadata-complete="true">
+
+    <!--配置一些web应用初始化参数    -->
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc://localhost:3306/shop</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>org.example.servlet.HelloServlet</servlet-class>
+            <!--可以带一些参数        -->
+<!--        <init-param>-->
+<!--            <param-name></param-name>-->
+<!--            <param-value></param-value>-->
+<!--        </init-param>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <!--getC    -->
+    <servlet>
+        <servlet-name>getc</servlet-name>
+        <servlet-class>org.example.servlet.GetServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>getc</servlet-name>
+        <url-pattern>/getc</url-pattern>
+    </servlet-mapping>
+
+    <!--getp    -->
+    <servlet>
+        <servlet-name>getp</servlet-name>
+        <servlet-class>org.example.servlet.GetParam</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getp</servlet-name>
+        <url-pattern>/getp</url-pattern>
+    </servlet-mapping>
+
+    <!--getp    -->
+    <servlet>
+        <servlet-name>disp</servlet-name>
+        <servlet-class>org.example.servlet.ServletDispatch</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>disp</servlet-name>
+        <url-pattern>/disp</url-pattern>
+    </servlet-mapping>
+
+    <!--getprop    -->
+    <servlet>
+        <servlet-name>getprop</servlet-name>
+        <servlet-class>org.example.servlet.GetProperties</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getprop</servlet-name>
+        <url-pattern>/getprop</url-pattern>
+    </servlet-mapping>
+
+</web-app>
